@@ -168,3 +168,6 @@
 .modificar-btn {
     margin-top: 10px; /* Espacio superior */
 }
+#otros {
+    height: calc(6 * 1.2em); /* 1.2em es la altura aproximada de una línea de texto */
+}

@@ -1,133 +1,3 @@
-/* //Algoritomo Condicional/Algoritmo de Ciclo
-const frutas=["Uva","Platano","Manzana"];
-//console.log(frutas.length);
-
-let index=0;
-alert("Te dare mi opinion del platano, la manzana y la uva");
-while (index==0) {
-    //console.log("Entre");
-    for (index=0; index < frutas.length; index++) {
-        let element = frutas[index];
-        alert("La fruta es..."+element)
-        //console.log(element);
-        if (element=="Uva") {
-            alert("Que rico es el vino");
-        }
-        if (element=="Platano") {
-            alert("Que mala la leche con platano");
-        }
-        if(element=="Manzana"){
-            alert("Me encanta el dulce de Mazana")
-        }
-        
-    }
-}
-//Simulador
-const Operacion=(op,num1,num2)=>{
-    switch (op) {
-        case "+":
-            return num1+num2;
-        case "*":
-            return num1*num2;
-    
-        default:
-            break;
-    }
-}
-alert("Les damos la Bienvenida el Simulador de seleccion del mejor telefono celular");
-
-alert("Te realizaremos algunas prguntas para decirte cual es le mejor telefono");
-
-let TelefonoUsuario=prompt("Indicame cual es tu telefono");
-let MegaPixelCamara=prompt("Indicame la cantidad de MegaPixeles de tu telefono");
-let Resultado= Operacion("+",parseInt(MegaPixelCamara),20); //parseInt(MegaPixelCamara)+20;
-alert("estamos calculando cuantos deberian ser los megapixeles de tu telefono ideal")
-alert("Segun nuestra suma deberi ser: "+ Resultado);
-Resultado=prompt("Ingrese la cantidad de Ram que tiene su telefono");
-Resultado= Operacion("*",parseInt(Resultado),40);//parseInt(Resultado)*40;
-alert("estamos calculando cuantos deberian ser la cantidad de ram ideal")
-alert("La cantidad de ram ideal deberia ser: "+ Resultado);
-alert("Segun nuestro analisis, el telefono celular que usted necesita es el Iphone 15 Max Pro, somo un simulador totalmente pagado por Apple,Gracias")
- */
-
-/* Calculo de Finiquitos Chile*/
-/* El Finiquito es el reflejo de las condiciones en que termina un contrato de trabajo. Cada vez que termina un contrato, es obligación del empleador que exista un finiquito que dé cuenta de ese término de contrato. Con excepción de los contratos de duración de 30 días o menos.
-Esta obligación está contenida en el artículo 9 del código del trabajo.
-La importancia del finiquito es que libera a las partes (trabajador y empleador) de todas las responsabilidades que pudieran emanar del contrato de trabajado que originalmente los vinculó. (algo así como el contrato del fin de contrato).
-A continuación presentamos una calculadora de finiquito online para calcular tu finiquito automáticamente. Sólo debes llenar los puntos que se indican. */
-
-/*Simulador de Finiquitos*/
-/* ¿Como calcular un finiquito?
-En general el calculo del finiquito se compone de los siguientes ítemes:
--Remuneraciones pendientes: Es el sueldo pendiente por los días trabajados. si es despedido antes el día de pago de sueldo o cualquier otra remuneración pendiente que tenga que pagar el empleador.
--Indemnización de aviso previo: En el caso que se despida con un aviso menor a 30 días corresponde una indemnización.
--Indemnización por años de servicio:Según la cantidad de años que se ha trabajo corresponde una indemnización, los meses se aproximan a 1 año en caso de ser mayor a 6 meses.
--Vacaciones proporcionales o feriado proporcional: Corresponden a las vacaciones pendientes más los días inhábiles que se suman a estas mismas.
-Además el contrato solo puede terminar por una causa legal (artículos 159, 160 y 161 del código del trabajo). */
-
-/* //Bienvenida
-alert('Estimado usuarios te damos la Bienvenida, al simulador de finiquitos El Ladroncillo')
-
-//Declaracion de Variables
-let RemPendiente = 0;
-let IndemAvPrevio = 0;
-let IndemYearServic = 0;
-let VacProp = 0;
-let DiasInhabiles = 0;
-let CausalOp;
-let Oper;
-const ArticuloLegal = ["Articulo 159","Articulo 160","Articulo 161"];
-const CausalLegal=[{articulo:"1 Mutuo acuerdo"},{articulo:"2 Renuncia del trabajador"}];
-
-//Inputs
-RemPendiente=parseFloat(prompt("Ingrese remuneraciones Pendientes"));
-IndemAvPrevio=parseFloat(prompt("Ingrese Indemnizacion aviso previo"));
-IndemYearServic=parseFloat(prompt("Ingrese Indemnizacion años de servicio"));
-VacProp=prompt("Ingrese vacaciones proporcionales");
-DiasInhabiles=prompt("Ingrese dias inhábiles");
-ArticulolOp=prompt("Ingrese el nuemero de la opcion "+ ArticuloLegal)
-//Funciones
-function CalcularFini(Oper,Valor1,Valor2){
-switch (Oper) {
-    case "+":
-        return Valor1 + Valor2;
-
-    case "-":
-        return Valor1 - Valor2;
-
-    case "*":
-        return Valor1 * Valor2;
-    case "/":
-        return Valor1 / Valor2;
-
-}
-}
-function CuasalLegalN(causalinp){
-    this.articulo = causalinp;
-}
-//Operaciones con Array
-const ArticuloCompleta=ArticuloLegal.find((CausalLegalFind) => {
-    return CausalLegalFind.includes(ArticulolOp);
-});
-console.log(ArticuloCompleta);
-
-const ArticuloCompletaFiltro=ArticuloLegal.filter((CausalLegalFilter) => {
-    return CausalLegalFilter.includes(ArticulolOp);
-});
-console.log(ArticuloCompletaFiltro);
-//Objetos
-    const NuevaCausal=new CuasalLegalN1(
-        "Muerte del trabajador"
-    );
-    console.log(NuevaCausal);
-//Logica
-alert("El monto a pagar es :"+ CalcularFini("+",RemPendiente,CalcularFini("+",IndemYearServic,IndemYearServic))+" Por la causal "+ ArticuloCompleta);
-
-alert("Por concepto de dias Inhabiles le corresponden: " + CalcularFini("*",DiasInhabiles,300) + " Pero por razones legales no se lo pagaremos")
-alert("Por concepto de Vacaciones proporcionales le corresponden: " + CalcularFini("*",VacProp,300) + " Pero por razones legales no se lo pagaremos")
-
-alert("Estimado usuario espero que disfrutata ser robado por nuestro simulador, que tenga buen dia") */
-
         // Clase para representar la información de un finiquito
         class Finiquito {
             constructor(nombre, email, rut, fechaTermino, indemnizacion, otros, articulo) {
@@ -191,10 +61,8 @@ function concatenarDatosGenerador() {
     // Actualizar el campo "otros" en el formulario
     document.getElementById('otros').value = otros;
 }
-
 // Al cargar la página, mostrar el SweetAlert
 window.onload = function () {
-    concatenarDatosGenerador();
     cargarFiniquitosDesdeLocalStorage();
     solicitarInformacionUsuario()/*.then((result) => {
         if (result.isConfirmed) {
@@ -203,7 +71,7 @@ window.onload = function () {
             document.getElementById('email').value = result.value[1];
         }
     });*/
-
+    concatenarDatosGenerador();
     // Llenar el select con los artículos
     const articulos = ["Articulo 159", "Articulo 160", "Articulo 161"];
     const selectArticulo = document.getElementById('articulo');
@@ -414,6 +282,12 @@ function modificarFiniquito(finiquito, tarjeta) {
 
         // Eliminar el botón "Guardar"
         guardarBtn.remove();
+        const botonGenerarFiniquito = document.getElementById('generar-finiquito-btn');
+        if (!botonGenerarFiniquito.disabled) {
+            // Aquí deberías colocar tu lógica para generar el finiquito
+            // Una vez que se genere el finiquito, deshabilita el botón nuevamente
+            botonGenerarFiniquito.disabled = true;
+        }
     });
 
     // Agregar el botón "Guardar" al formulario
@@ -516,40 +390,37 @@ document.getElementById('generar-finiquito-btn').addEventListener('click', funct
     }
 });
 
-// Función para limpiar el localStorage al cerrar la pestaña del explorador
-window.addEventListener('beforeunload', function() {
-    localStorage.removeItem('finiquitos');
-});
-
 async function calcularDiasInhabiles(fechaTerminoContrato, valorIndemnizacion) {
     try {
         const response = await fetch(`https://date.nager.at/api/v3/PublicHolidays/${fechaTerminoContrato.getFullYear()}/CL`);
         const feriados = await response.json();
 
+        let diasInhabiles = 0;
         const quinceDiasDespues = new Date(fechaTerminoContrato);
         quinceDiasDespues.setDate(quinceDiasDespues.getDate() + 15);
 
-        let diasInhabiles = 0;
-        for (let i = 0; i < 15; i++) {
-            const dia = new Date(fechaTerminoContrato);
-            dia.setDate(dia.getDate() + i);
-            if (dia.getDay() === 0 || dia.getDay() === 6) {
+        const unDia = 24 * 60 * 60 * 1000; // Milisegundos en un día
+        for (let dia = new Date(fechaTerminoContrato); dia <= quinceDiasDespues; dia.setDate(dia.getDate() + 1)) {
+            if (dia.getDay() === 0 || dia.getDay() === 6) { // Día sábado o domingo
                 diasInhabiles++;
-            }
-            const fechaFormatoAPI = dia.toISOString().slice(0, 10);
-            if (feriados.some(feriado => feriado.date === fechaFormatoAPI)) {
-                diasInhabiles++;
+            } else {
+                const fechaFormatoAPI = dia.toISOString().slice(0, 10);
+                if (feriados.some(feriado => feriado.date === fechaFormatoAPI)) {
+                    diasInhabiles++;
+                }
             }
         }
 
         const montoInhabiles = diasInhabiles * (valorIndemnizacion * 0.3);
         // Concatenar la información de los días inhábiles al valor actual del campo "otros"
+        const totalAPagar = valorIndemnizacion + montoInhabiles;
         const otros = document.getElementById('otros').value;
-        document.getElementById('otros').value = otros + `\nDías inhabiles: ${diasInhabiles}, Monto por días inhabiles: ${montoInhabiles.toFixed(2)}`;
+        document.getElementById('otros').value = otros + `\nDías inhabiles: ${diasInhabiles}, Monto por días inhabiles: ${montoInhabiles.toFixed(2)}\nEl monto a pagar al trabajador es: $${totalAPagar.toLocaleString('es-CL')}.`;
     } catch (error) {
         console.error('Error al calcular días inhábiles:', error);
     }
 }
+
 
 // Llamada a la función cuando se cambia la fecha de término del contrato
 document.getElementById('fecha-termino').addEventListener('change', () => {
