@@ -1,4 +1,21 @@
-        // Clase para representar la información de un finiquito
+/*let isClosing = false;
+
+window.addEventListener('beforeunload', function() {
+    isClosing = true;
+    localStorage.removeItem('finiquitos');
+});
+
+window.addEventListener('load', function() {
+    if (!isClosing) {
+        // Aquí puedes agregar cualquier lógica que deseas ejecutar solo cuando la página se carga inicialmente,
+        // pero no cuando se cierra o actualiza
+        console.log("Carga de pagina");
+    }
+});*/
+
+ 
+ 
+ // Clase para representar la información de un finiquito
         class Finiquito {
             constructor(nombre, email, rut, fechaTermino, indemnizacion, otros, articulo) {
                 this.nombre = nombre;
